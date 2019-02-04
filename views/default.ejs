@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<% include partials/page/head.ejs %>
+  </head>
+  <body class="<% classname %>" >
+    <% include partials/page/header.ejs %>
+
+  <div class="container">
+	<p>Franzen whatever cliche heirloom farm-to-table, salvia tattooed
+	typewriter raw denim tumblr meggings bicycle rights post-ironic.
+	Readymade wayfarers viral blog, retro flexitarian fashion axe
+	skateboard listicle forage swag biodiesel. Everyday carry quinoa
+	church-key, celiac cardigan umami pork belly biodiesel. Thundercats
+	blog microdosing migas ethical ramps, fanny pack pour-over tousled
+	cray synth everyday carry leggings mlkshk flannel. Marfa hammock
+	shoreditch, brooklyn tofu helvetica biodiesel asymmetrical neutra
+	gentrify. Lo-fi typewriter mixtape letterpress, lomo master cleanse
+	etsy marfa. Pabst swag locavore bushwick sustainable.</p>
+
+  <% if (typeof(users) !== 'undefined') { %>
+    <ul>
+      <% for (i=0; i<users.length; i++) { %>
+        <li><%= users[i] %></li>
+      <% } %>
+    </ul>
+    <% } %>
+
+  </div><!-- container -->
+
+  <% include partials/page/footer.ejs %>
+  <% include partials/page/jsdefaults.ejs %>
+  </body>
+</html>
+
+
+
